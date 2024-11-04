@@ -1,0 +1,27 @@
+footer {
+  background-color: #fff; /* Warna latar belakang footer */
+  padding: 20px; /* Padding di dalam footer */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Bayangan di bagian atas footer */
+  text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+.footer-content {
+  max-width: 1200px; /* Lebar maksimum konten footer */
+  margin: 0 auto; /* Memusatkan konten footer */
+  color: #333; /* Warna teks */
+}
+
+.social-links {
+  margin-top: 10px; /* Jarak antara teks hak cipta dan tautan sosial */
+}
+
+.social-links a {
+  margin: 0 10px; /* Jarak antara tautan sosial */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+  color: #4CAF50; /* Warna tautan sosial */
+  transition: color 0.3s; /* Transisi saat hover */
+}
+
+.social-links a:hover {
+  color: #26734d; /* Warna saat hover pada tautan sosial */
+}
