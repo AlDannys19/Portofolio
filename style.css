@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("./footer.css");
+
 
 :root {
   --primaryTextColor: #232e35;
@@ -126,17 +128,11 @@ a{
   display: flex;
   justify-content: space-between;
   padding: 2rem 0;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 99;
   background-color: transparent;
   transition: background-color 0.3s ease;
-}
-
-.nav.scrolled{
-  background-color: #333; /* Warna navbar saat discroll */
-  color: #fff;
-  width: 100%;
 }
 
 .nav ul{
@@ -160,6 +156,18 @@ nav ul li{
   object-fit: cover;
 }
 
+.scrolled{
+  position: fixed; /* Menjadikan navbar tetap di tempat */
+  top: 0; /* Menempatkan navbar di bagian atas halaman */
+  left: 0;
+  right: 0;
+  background: white; /* Warna latar belakang */
+  gap: 1.5rem; /* Jarak antar elemen di dalam navbar */
+  padding: 1rem 1.5rem; /* Menambahkan jarak dalam navbar agar tidak dempet */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan agar navbar terlihat lebih jelas */
+  z-index: 1000; /* Menjamin navbar berada di atas elemen lainnya */
+}
+
 button .btn{
   justify-content: center;
 }
@@ -167,7 +175,7 @@ button .btn{
 .burger div{
   width: 25px;
   height: 2px;
-  background-color: #000;
+  background: #000;
   margin: 7px;
   transition: all .3s;
   z-index: 99;
@@ -176,7 +184,7 @@ button .btn{
 .burger{
   display: none;
   z-index: 99;
-  position: fixed;
+  position: static;
   top:33px;
   right: 35px;
 }
@@ -428,5 +436,48 @@ button .btn{
   background: var(--primaryIconColorHover);
 }
 
+.contact-item{
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
 
+.contact-item-icon{
+  background: var(--thirdBackgroundColor);
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.contact-item-icon svg{
+  fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4{
+  margin-bottom: 0.6rem;
+}
+
+footer{
+  padding: 4rem 0;
+  background: var(--secondaryBackgroundColor);
+  text-align: center;
+}
+
+.footer-icons{
+  margin-bottom: 1rem;
+}
+
+.footer-icons a{
+  margin: 0 .5rem;
+}
+
+.footer-icons svg{
+  fill: #3e3f40;
+}
+
+.footer-icons a:hover svg{
+  fill: #000;
+}
